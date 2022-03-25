@@ -249,6 +249,7 @@ img {
   fill: #ffffff;
 }
 /* PAGE STUDIO */
+
 /* hero */
 .hero {
   padding-top: 200px;
@@ -293,6 +294,58 @@ img {
 .btn-order:hover,
 .btn-order:focus {
   background-color: #188ce8;
+}
+.backdrop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms var(--timing-fun);
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.backdrop.is-hidden .modal {
+  transform: scale(0.9);
+}
+.modal {
+  position: relative;
+  width: 530px;
+  height: 580px;
+  background-color: #ffffff;
+  transform: scale(1);
+  transition: background-color 250ms var(--timing-fun),
+    transform 250ms var(--timing-fun);
+}
+.btn-close-modal {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  height: 30px;
+  width: 30px;
+  background-color: #ffffff;
+  border-color: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 250ms var(--timing-fun),
+    border-color 250ms var(--timing-fun);
+}
+.btn-close-modal:hover,
+.btn-close-modal:focus {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-color: rgb(0, 0, 0);
 }
 /* sections peculiarities and work */
 .peculiarities,
@@ -519,6 +572,29 @@ img {
 } */
 .item-project:not(:nth-last-child(-n + 3)) {
   margin-bottom: var(--margin-right-item);
+}
+.box {
+  position: relative;
+  overflow: hidden;
+}
+.box:hover .overlay {
+  transform: translateY(0);
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: transform 250ms ease;
+}
+.caption-project {
+  font-size: 18px;
+  line-height: 1.56;
+  color: #ffffff;
 }
 .wrapper-dec-project {
   padding: 20px 24px;

@@ -62,7 +62,16 @@
             Эффективные решения <br />
             для вашего бизнеса
           </h1>
-          <button type="button" class="btn-order">Заказать услугу</button>
+          <button type="button" class="btn-order" data-modal-open>
+            Заказать услугу
+          </button>
+          <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+              <button class="btn-close-modal" data-modal-close type="button">
+                &#10005;
+              </button>
+            </div>
+          </div>
         </div>
       </section>
       <section class="peculiarities">
@@ -435,5 +444,6 @@
         </div>
       </div>
     </footer>
+    <script src="./modal.js"></script>
   </body>
 </html>
