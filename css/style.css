@@ -331,8 +331,6 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0;
-  padding: 0;
   height: 30px;
   width: 30px;
   background-color: #ffffff;
