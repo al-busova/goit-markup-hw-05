@@ -571,11 +571,12 @@ img {
 .item-project:not(:nth-last-child(-n + 3)) {
   margin-bottom: var(--margin-right-item);
 }
+
 .box {
   position: relative;
-  overflow: hidden;
+  overflow: hidden;  
 }
-.box:hover .overlay {
+.link-item-project:hover .overlay, .link-item-project:focus .overlay {
   transform: translateY(0);
 }
 .overlay {
@@ -584,13 +585,12 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
+  overflow: auto;
   padding: 63px 24px;
   background-color: rgba(33, 150, 243, 0.9);
   transform: translateY(100%);
-  transition: transform 250ms ease;
-}
-.caption-project {
-  font-size: 18px;
+  transition: transform 250ms ease; 
+   font-size: 18px;
   line-height: 1.56;
   color: #ffffff;
 }
